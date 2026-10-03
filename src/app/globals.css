@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #f7f7f7;
+  --color-canvas-card: #ffffff;
+  --color-surface-subtle: #eff0f0;
+  
+  --color-navy-950: #030c0d;
+  --color-navy-900: #071D35;
+  --color-navy-800: #0d2426;
+  --color-navy-700: #103B6B;
+  
+  --color-blue-600: #0B5EA8;
+  --color-blue-500: #1A8FE3;
+  --color-blue-400: #3EA6F2;
+  --color-blue-100: #E2EFF9;
+  --color-blue-50: #F2F8FC;
+  
+  --color-slate-900: #030c0d;
+  --color-slate-800: #1a2228;
+  --color-slate-700: #334155;
+  --color-slate-600: #505050;
+  --color-slate-500: #64748B;
+  --color-slate-400: #94A3B8;
+  --color-slate-300: #CBD5E1;
+  --color-slate-200: #E2E8F0;
+  --color-slate-100: #F1F5F9;
+  --color-slate-50: #F8FAFC;
+}
+
+:root {
+  --background: #f7f7f7;
+  --foreground: #030c0d;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Accessible focus visible rings */
+:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+/* Framer-grade smooth transitions */
+.transition-luxury {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle dot grid pattern on light canvas */
+.bg-subtle-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
